@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 from .views import PacientesCreate, PacientesDelete, PacientesList
 from .views import PacientesUpdate
+from .views import PacientesList
 
 urlpatterns = [
     path('', views.index, name="index"),

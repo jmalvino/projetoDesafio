@@ -14,7 +14,10 @@ class Pacientes(models.Model):
     cep = models.CharField(max_length=8)
     dataDeCriacao = models.DateTimeField(auto_now_add=True)
 
+    #metodo que mostra no banco de dados o nome definido
+    def __str__(self):
+        return self.nome
 
-#metodo que mostra no banco de dados o nome definido
-def __str__(self):
-    return self.nome
+
+
+

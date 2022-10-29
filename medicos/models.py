@@ -9,7 +9,9 @@ class Medicos(models.Model):
     senha = models.CharField(max_length=100)
     dataDeCriacao = models.DateTimeField(auto_now_add=True)
 
+    #metodo que mostra no banco de dados o nome definido
+    def __str__(self):
+        return self.email
 
-#metodo que mostra no banco de dados o nome definido
-def __str__(self):
-    return self.email
+
+
