@@ -7,7 +7,7 @@ class Medicos(models.Model):
     nome = models.CharField(max_length=255)
     email = models.CharField(max_length=100)
     senha = models.CharField(max_length=100)
-    dataDeCriacao = models.DateTimeField()
+    dataDeCriacao = models.DateTimeField(auto_now_add=True)
 
 
 #metodo que mostra no banco de dados o nome definido
