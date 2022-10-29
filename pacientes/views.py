@@ -2,7 +2,7 @@ from audioop import reverse
 from ssl import AlertDescription
 from django.shortcuts import render
 from .models import Pacientes
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 # Criacao
@@ -31,3 +31,10 @@ class PacientesUpdate(UpdateView):
     fields = ['nome','telefone','endereco','numero','cidade','uf','pais','cep']
     template_name: 'pacientes/pacientes_form.html'
     success_url = reverse_lazy('index')
+
+# delete
+class PacientesDelete(DeleteView):
+    model = Pacientes   
+    template_name: 'pacientes/form_excluir.html'
+    success_url = reverse_lazy('index')
+
