@@ -19,7 +19,7 @@
         {% for pacientes in object_list %}
         <tr>
             <td>{{ pacientes.nome }}</td>
-            <td>{{ pacientes.email }}</td>
+            <td>{{ pacientes.telefone }}</td>
             <td>
                 <a href="{% url 'editar-pacientes' pacientes.pk %}" class="btn btn-warning btn-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
