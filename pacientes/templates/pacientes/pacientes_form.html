@@ -1,5 +1,6 @@
 {% extends 'pacientes/base.html' %}
 
+{% load crispy_forms_tags %}
 {%block titulo%}
     Pacientes
 {%endblock%}
@@ -13,10 +14,19 @@
 
 <form action ="" method="post">
     {% csrf_token %}
-    {{ form.as_p}}    
+    {{ form|crispy}}    
 
-    <button type="submit" class="btn btn-success"> Cadastrar </button>
+    <button type="submit" class="btn btn-success mt-2"> Cadastrar </button>
 </form>
 
 
-{% endblock %}</title>
+{% endblock %}
+
+
+<script src="js/jquery.mask.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+      $(#id_telefone).mask("(00) 00000.0000");
+    });
+  </script>
