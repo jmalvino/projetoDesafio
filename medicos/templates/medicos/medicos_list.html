@@ -15,7 +15,7 @@
             <th>Descrição</th>
             <th>Opção</th>
         </tr> 
-
+        {% if request.user.is_authenticated %}
         {% for medicos in object_list %}
         <tr>
             <td>{{ medicos.nome }}</td>
@@ -35,12 +35,13 @@
                 </a>
             </td>
         </td>
-
+        
         {% empty %}
         <tr>
             <td colspan="3"> Nenhum campo registrado. </td>
         </tr>
         {% endfor %}            
+        {% endif %}            
               
     </table>
 </div>
